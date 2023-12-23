@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:news/models/article_model.dart';
-import 'package:news/widgets/';
+import 'package:news/widgets/news_tile.dart';
 class NewsListView extends StatelessWidget {
   final List<ArticleModel> articles;
 
@@ -16,7 +16,7 @@ class NewsListView extends StatelessWidget {
       physics: const NeverScrollableScrollPhysics(),
       itemCount: articles.length,
       itemBuilder: (BuildContext context, int index) {
-        return NewsTile(article: articles[index]);
+        return NewsTile(articleModel: articles[index]);
       },
     );
   }
